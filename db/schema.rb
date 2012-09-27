@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20120915115236) do
     t.string   "picture"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.time     "fecha"
+    t.datetime "fecha"
   end
 
 end

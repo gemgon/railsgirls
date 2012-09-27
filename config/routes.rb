@@ -1,5 +1,9 @@
 Railsgirls::Application.routes.draw do
   resources :ideas
+  
+  match '/about_us' => 'pages#about_us'
+  match '/links' => 'pages#links'
+  
   root :to => 'ideas#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.

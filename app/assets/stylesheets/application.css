@@ -23,3 +23,21 @@ table, td, th { vertical-align: middle !important; border: none !important; }
 th { border-bottom: 1px solid #DDD !important; }
 td.picture { width: 140px; }
 td.picture img { width: 140px; }
+img.smaller {
+    height: 30px;
+    margin-left: 10px;
+}
+h1 {margin-bottom: 20px;}
+footer { 
+    background-color: #d3360b;
+    padding: 20px 0;
+}
+footer img {
+    float: left;
+    margin-right: 20px; 
+}
+footer p small {
+    float: left;
+    color: #000;
+    margin-top: 19px;
+}

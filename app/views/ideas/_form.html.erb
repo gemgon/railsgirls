@@ -1,4 +1,4 @@
-<%= form_for(@idea, :html => {:multipart => true}) do |f| %>
+<%= form_for(@idea, :html => {:multipart => true, :class=>"form-horizontal"}) do |f| %>
   <% if @idea.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
@@ -8,26 +8,38 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
-    </div>
+    </div> <!-- end #error_explanation -->
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :picture %><br />
-    <%= f.file_field :picture %>
-  </div>
-  <div class="field">
-    <%= f.label :fecha %><br />
-    <%= f.datetime_select :fecha %>
-  </div>
+  <div class="control-group">
+    <%= f.label :nombre, :class =>"control-label" %>
+    <div class="controls">  
+      <%= f.text_field :name %>
+    </div> <!-- end .controls -->
+  </div> <!-- end .field.control-group -->
+  
+  <div class="field control-group">
+    <%= f.label :descripción, :class =>"control-label" %>
+    <div class="controls">   
+      <%= f.text_area :description %>
+    </div> <!-- end .controls -->
+  </div> <!-- end .field.control-group -->
+  
+  <div class="field control-group">
+    <%= f.label :imagen, :class =>"control-label" %>
+    <div class="controls">   
+      <%= f.file_field :imagen %>
+    </div> <!-- end .controls -->
+  </div> <!-- end .field.control-group -->
+  
+  <div class="field control-group">
+    <%= f.label :fecha, :class =>"control-label" %>
+    <div class="controls">
+      <%= f.datetime_select :fecha %>
+    </div> <!-- end .controls -->
+  </div> <!-- end .field.control-group -->
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit("Guardar", {:class =>"btn btn-primary btn-large"}) %>
   </div>
 <% end %>
